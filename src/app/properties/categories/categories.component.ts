@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-
+  products:any=[];
   constructor() { }
 
   ngOnInit() {
+   this.products=["properties","cars","electonics","furniture","jobs",
+          "bikes","books","fashion","mobiles","pets","services"]
   }
 
 }

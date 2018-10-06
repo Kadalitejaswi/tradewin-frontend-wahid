@@ -9,40 +9,8 @@
           <li class="line nohover">
             <a routerLink="#">All Ads</a>
           </li>
-
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='/categories/properties'>Properties</a>
-          </li>
-         
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='/categories/cars'>Cars</a>
-          </li>
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='/categories/electronics'>Electronics-Appliances</a>
-          </li>
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='/categories/furniture'>Furniture</a>
-          </li>
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='/categories/jobs'>Jobs</a>
-          </li>
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='/categories/mobiles'>Mobiles</a>
-          </li>
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='/categories/bikes'>Bikes</a>
-          </li>
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='/categories/books'>Books,Sports & Hobbies</a>
-          </li>
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='/categories/fashion'>Fashion</a>
-          </li>
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='/categories/pets'>Pets</a>
-          </li>
-          <li class="nohover">
-            <a routerLinkActive="active-link" routerLink='/categories/services'>Services</a>
+          <li class="nohover" *ngFor="let list of products">
+            <a routerLinkActive="active-link" routerLink='/categories/{{list}}'>{{list}}</a>
           </li>
         </ul>
       </div>
@@ -50,7 +18,6 @@
         <router-outlet></router-outlet>
       </div>
       <div class="clearfix"></div>
-
     </div>
     </div>
 </div>

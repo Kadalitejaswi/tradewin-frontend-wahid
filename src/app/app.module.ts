@@ -19,9 +19,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { PetsComponent } from './properties/pets/pets.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { CarSaleComponent } from './properties/car-sale/car-sale.component';
 import { ServicesComponent } from './properties/services/services.component';
 import { PropertiesComponent } from './properties/properties/properties.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -42,14 +42,14 @@ import { PropertiesComponent } from './properties/properties/properties.componen
     PetsComponent,
     LoginComponent,
     RegisterComponent,
-    CarSaleComponent,
     ServicesComponent,
-    PropertiesComponent
+    PropertiesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
    
   ],
   providers: [],

@@ -10,41 +10,25 @@
     </div>
   </div>
   <div class="col-sm-12 line">
-    <img src="./assets/images/cars/cars.png" class="col-sm-2">
+    <img src="{{category.image}}" class="col-sm-2">
     <span class="col-sm-10">
-      <p class="size">Cars</p>
-      1,78,016 Ads
+      <p class="size">{{category.name}}</p>
+     {{category.ads}}
       <br>
       <a routerLink=''>View all Ads >></a>
     </span>
   </div>
-  <div class="col-sm-12" style="padding-top: 30px">
-    <div class="col-sm-2 box text-center">
+  <div class="col-sm-12" style="padding-top: 30px" >
+    <div class="col-sm-2 box text-center" *ngFor="let list of products">
 
 
-      <a routerLink='/carSale'>
-        <img src="./assets/images/cars/car.png">
-        <br> Cars</a>
+      <a routerLink='/'>
+        <img src="{{list.image}}">
+        <br> {{list.name}}</a>
     </div>
-    <div class="col-sm-2 box text-center">
+   
 
-      <a routerLink=''>
-        <img src="./assets/images/cars/truck.png">
-        <br> Commercial &
-        <br>Vehicles</a>
-    </div>
-    <div class="col-sm-2 box text-center">
-
-      <a routerLink=''>
-        <img src="./assets/images/cars/vehicle.png">
-        <br> Other Vehicles</a>
-    </div>
-    <div class="col-sm-2 box text-center">
-
-      <a routerLink=''>
-        <img src="./assets/images/cars/spare.png">
-        <br>Spare Parts</a>
-    </div>
+    
 
   </div>
 

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes,RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { CategoriesComponent } from '../properties/categories/categories.component';
 import { CarsComponent } from '../properties/cars/cars.component';
 import { ElectronicsComponent } from '../properties/electronics/electronics.component';
@@ -17,13 +16,11 @@ import { RegisterComponent } from '../auth/register/register.component';
 import { ServicesComponent } from '../properties/services/services.component';
 import { PropertiesComponent } from '../properties/properties/properties.component';
 
-const routes:Routes=[
-  {path:'',component:HomeComponent},
-  {path:'home',component:HomeComponent},
-  {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterComponent},
-
-
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'categories', component: CategoriesComponent,
     children: [
       { path: 'cars', component: CarsComponent },
@@ -34,11 +31,11 @@ const routes:Routes=[
       { path: 'books', component: BooksComponent },
       { path: 'bikes', component: BikesComponent },
       { path: 'fashion', component: FashionComponent },
-      { path: 'pets', component: PetsComponent},
-      { path:'services',component:ServicesComponent},
-      { path:'properties',component:PropertiesComponent     }
-       ],
-   
+      { path: 'pets', component: PetsComponent },
+      { path: 'services', component: ServicesComponent },
+      { path: 'properties', component: PropertiesComponent }
+    ],
+
   }
 
 ]

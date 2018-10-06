@@ -9,48 +9,21 @@
   </div>
 </div>
 <div class="col-sm-12 line">
-  <img src="./assets/images/books/books.png" class="col-sm-2">
+  <img [src]="category.image" class="col-sm-2">
   <span class="col-sm-10">
-    <p class="size">Books, Sports & Hobbies</p>
-    1,78,016 Ads
+    <p class="size"  [innerText]="category.name"></p>
+   {{category.ads}}
     <br>
     <a routerLink=''>View all Ads >></a>
   </span>
 </div>
 <div class="col-sm-12" style="padding-top: 30px">
-  <div class="col-sm-2 box text-center">
+  <div class="col-sm-2 box text-center" *ngFor="let list of products">
 
 
-    <a routerLink=''>
-      <img src="./assets/images/books/book.png">
-      <br>Books</a>
+    <a routerLink='' >
+      <img [src]="list.image" alt="not found">
+      <br>{{list.name}}</a>
   </div>
-  <div class="col-sm-2 box text-center">
 
-    <a routerLink=''>
-      <img src="./assets/images/books/music.png">
-      <br> Musical &
-      <br>Instruments</a>
-  </div>
-  <div class="col-sm-2 box text-center">
-
-    <a routerLink=''>
-      <img src="./assets/images/books/sports.png">
-      <br> Sports &
-      <br>Equpiment</a>
-  </div>
-  <div class="col-sm-2 box text-center">
-
-    <a routerLink=''>
-      <img src="./assets/images/books/gym.png">
-      <br> Gym &
-      <br>Fitness</a>
-  </div>
-  <div class="col-sm-2 box text-center">
-
-    <a routerLink=''>
-      <img src="./assets/images/books/hobbies.png">
-      <br> Other Hobbies
-    </a>
-  </div>
 </div>
