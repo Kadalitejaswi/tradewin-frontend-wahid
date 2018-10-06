@@ -15,12 +15,14 @@ import { LoginComponent } from '../auth/login/login.component';
 import { RegisterComponent } from '../auth/register/register.component';
 import { ServicesComponent } from '../properties/services/services.component';
 import { PropertiesComponent } from '../properties/properties/properties.component';
+import { TwoWayComponent } from '../two-way/two-way.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'two-way', component: TwoWayComponent },
   { path: 'categories', component: CategoriesComponent,
     children: [
       { path: 'cars', component: CarsComponent },

@@ -22,6 +22,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ServicesComponent } from './properties/services/services.component';
 import { PropertiesComponent } from './properties/properties/properties.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TwoWayComponent } from './two-way/two-way.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     ServicesComponent,
     PropertiesComponent,
+    TwoWayComponent,
   ],
   imports: [
     BrowserModule,
