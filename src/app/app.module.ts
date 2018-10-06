@@ -23,6 +23,7 @@ import { ServicesComponent } from './properties/services/services.component';
 import { PropertiesComponent } from './properties/properties/properties.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TwoWayComponent } from './two-way/two-way.component';
+import { ProductService } from './services/product.service';
 
 
 @NgModule({
@@ -54,7 +55,7 @@ import { TwoWayComponent } from './two-way/two-way.component';
     HttpClientModule
    
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

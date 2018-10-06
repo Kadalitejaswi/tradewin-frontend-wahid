@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-books',
@@ -6,19 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
-  category = {
-    name: "Books, Sports & Hobbies",
-    image: "./assets/images/books/books.png",
-    ads: " 1,78,016 Ads"
-  }
-  products = [
-  { name: "Books", image: "./assets/images/books/book.png" },
-  { name: "Musical & Instruments", image: "./assets/images/books/music.png" },
-  { name: "Sports & Equpiment", image: "./assets/images/books/sports.png" },
-  { name: "Gym & Fitness", image: "./assets/images/books/gym.png" }]
-  constructor() { }
+ books={};
+  constructor(private _prod:ProductService) { }
 
   ngOnInit() {
+    this.books=this._prod.books;
   }
 
 }

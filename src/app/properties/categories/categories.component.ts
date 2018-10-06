@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-categories',
@@ -7,11 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
   products:any=[];
-  constructor() { }
+  constructor(private _prod:ProductService) { }
 
   ngOnInit() {
-   this.products=["properties","cars","electonics","furniture","jobs",
-          "bikes","books","fashion","mobiles","pets","services"]
-  }
+    this.products=this._prod.products
+    }
 
 }

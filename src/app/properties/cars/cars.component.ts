@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-cars',
@@ -6,18 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cars.component.css']
 })
 export class CarsComponent implements OnInit {
-  category = {
-    name: "Cars",
-    image: "./assets/images/cars/car.png",
-    ads: " 1,78,016 Ads"
-  }
-  products = [{ name: "cars", image: "./assets/images/cars/car.png" },
-  { name: "truck", image: "./assets/images/cars/truck.png" },
-  { name: "vehicles", image: "./assets/images/cars/vehicle.png" },
-  { name: "spare parts", image: "./assets/images/cars/spare.png" }]
-  constructor() { }
+cars={}
+  constructor(private _prod:ProductService) { }
 
   ngOnInit() {
+    this.cars=this._prod.cars;
   }
 
 }

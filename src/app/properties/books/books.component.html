@@ -9,16 +9,16 @@
   </div>
 </div>
 <div class="col-sm-12 line">
-  <img [src]="category.image" class="col-sm-2">
+  <img [src]="books.category.image" class="col-sm-2">
   <span class="col-sm-10">
-    <p class="size"  [innerText]="category.name"></p>
-   {{category.ads}}
+    <p class="size"  [innerText]="books.category.name"></p>
+   {{books.category.ads}}
     <br>
     <a routerLink=''>View all Ads >></a>
   </span>
 </div>
 <div class="col-sm-12" style="padding-top: 30px">
-  <div class="col-sm-2 box text-center" *ngFor="let list of products">
+  <div class="col-sm-2 box text-center" *ngFor="let list of books.products">
 
 
     <a routerLink='' >
