@@ -11,7 +11,15 @@ cars={}
   constructor(private _prod:ProductService) { }
 
   ngOnInit() {
-    this.cars=this._prod.cars;
+  this._prod.getproductData("cars")
+  .subscribe(
+    res=>{
+          this.cars=res;
+          // console.log(res);
+          },
+    err=>{
+          console.log(err);
+         })
   }
 
 }
