@@ -24,6 +24,7 @@ import { PropertiesComponent } from './properties/properties/properties.componen
 import { HttpClientModule } from '@angular/common/http';
 import { TwoWayComponent } from './two-way/two-way.component';
 import { ProductService } from './services/product.service';
+import { ProductDetailsComponent } from './properties/product-details/product-details.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { ProductService } from './services/product.service';
     ServicesComponent,
     PropertiesComponent,
     TwoWayComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,

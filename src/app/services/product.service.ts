@@ -17,4 +17,10 @@ export class ProductService {
     return this.http.get(this._productUrl + "/" + data);
   }
 
+  getSubProducts(name,id){
+    console.log(name);
+    console.log(id);
+   return this.http.get<any>(this._productUrl+"/"+name+"/"+id)
+  
+  }
 }

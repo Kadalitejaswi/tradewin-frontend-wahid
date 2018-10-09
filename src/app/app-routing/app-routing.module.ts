@@ -16,6 +16,7 @@ import { RegisterComponent } from '../auth/register/register.component';
 import { ServicesComponent } from '../properties/services/services.component';
 import { PropertiesComponent } from '../properties/properties/properties.component';
 import { TwoWayComponent } from '../two-way/two-way.component';
+import { ProductDetailsComponent } from '../properties/product-details/product-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -37,8 +38,8 @@ const routes: Routes = [
       { path: 'services', component: ServicesComponent },
       { path: 'properties', component: PropertiesComponent }
     ],
-
-  }
+  },
+  { path: ':product/:productId', component: ProductDetailsComponent}
 
 ]
 

@@ -15,7 +15,7 @@ bikes={};
     .subscribe(
       res=>{
             this.bikes=res;
-            console.log(res);
+            // console.log(res);
             },
       err=>{
             console.log(err);
