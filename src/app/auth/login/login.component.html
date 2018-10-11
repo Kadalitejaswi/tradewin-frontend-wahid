@@ -3,7 +3,7 @@
       <div class="col-xs-5 login-section">
         <h1 class="login-heading">LOGIN</h1>
         <P class="login-paragraph">Enter your Emailid & password</P>
-        <form #regForm='ngForm'  (ngSubmit)="Register(regForm)">
+        <form #regForm='ngForm'>
         <div class="form-group">
           <input type="email" [(ngModel)]="logindata.email" class="form-control"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="EMAIL" id="name" name="email" #email="ngModel" required>
         </div>
@@ -24,7 +24,7 @@
           <a routerLink="/forgotpassword">Forgot password?</a>
         </div>
        <div class="text-right">
-          <button type="submit" [disabled]="!regForm.form.valid" (click)="Login()" class="btn btn-primary btn-lg setting-loginButton">LOGIN</button>
+          <button type="submit" [disabled]="!regForm.form.valid" (click)="login(logindata)" class="btn btn-primary btn-lg setting-loginButton">LOGIN</button>
        </div>
        </form>
        <div class="text-center">

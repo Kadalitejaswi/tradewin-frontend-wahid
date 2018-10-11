@@ -13,7 +13,7 @@
         <i class="fab fa-google"></i>  signup with Google</button>
     </div>
     </div>
-    <form #regForm='ngForm'  (ngSubmit)="Register(regForm)" class="separator">
+    <form #regForm='ngForm' class="separator">
       <div class="form-group input-group col-xs-12">
         <div class="col-xs-6 padding-remove fname">
           <input type="text" [(ngModel)]="userdata.Fname" name="Fname" class="form-control border " placeholder="FIRST NAME"  #Fname="ngModel" minlength="3" required>
@@ -64,7 +64,7 @@
               </div>
       </div>
     </div>
-        <button (click)="signUp()" [disabled]="!regForm.form.valid" type="submit" class="btn btn-block btn-lg signupbtn separator"> SIGN UP</button>
+        <button (click)="signUp(userdata)" [disabled]="!regForm.form.valid" type="submit" class="btn btn-block btn-lg signupbtn separator"> SIGN UP</button>
     </form>
     <div class="text-center separator">Have an account?
       <a routerLink="/login">Login</a>

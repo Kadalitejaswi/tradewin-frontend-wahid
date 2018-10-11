@@ -25,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TwoWayComponent } from './two-way/two-way.component';
 import { ProductService } from './services/product.service';
 import { ProductDetailsComponent } from './properties/product-details/product-details.component';
+import { AuthService } from './services/auth.service';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -49,6 +51,7 @@ import { ProductDetailsComponent } from './properties/product-details/product-de
     PropertiesComponent,
     TwoWayComponent,
     ProductDetailsComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,7 @@ import { ProductDetailsComponent } from './properties/product-details/product-de
     HttpClientModule
    
   ],
-  providers: [ProductService],
+  providers: [ProductService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

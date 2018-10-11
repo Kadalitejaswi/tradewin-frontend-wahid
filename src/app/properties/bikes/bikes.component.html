@@ -19,14 +19,11 @@
 </div>
 <div class="col-sm-12" style="padding-top: 30px">
   <div class="col-sm-2 box text-center" *ngFor="let list of bikes.subcategory">
-
     <a routerLink='/{{bikes.name}}/{{list._id}}'>
       <img src="{{list.image}}">
       <br> {{list.name}}</a>
   </div>
-
-    
-</div>
+ </div>
 <!-- <div class="container">
     <div class="row">
       <div class="col-xs-2 col-sm-2 col-md-2"> <img  class="img-fluid" src="./assets/images/bikes/bikes.png">

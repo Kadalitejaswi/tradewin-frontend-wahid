@@ -3,9 +3,11 @@
     <div class="container">
         <div class="row row1">
             <ul class="largenav pull-right" >
-                <li class="upper-links"><a class="links" routerLink='/home'>Home</a></li>
-                <li class="upper-links"><a class="links" routerLink='/login'>Login</a></li>
-                <li class="upper-links"><a class="links" routerLink='/register'>Sign Up</a></li>
+                <li class="upper-links" ><a class="links" routerLink='/home'>Home</a></li>
+                <li class="upper-links" *ngIf='!_authService.logedIn()'><a class="links" routerLink='/login'>Login</a></li>
+                <li class="upper-links" *ngIf='!_authService.logedIn()'><a class="links" routerLink='/register'>Sign Up</a></li>
+                <li  class="upper-links" *ngIf='_authService.logedIn()'><a (click)='_authService.logedOutUser()' class="links"
+                    routerLinkActive ="active">Log Out</a></li>
                 <li class="upper-links"><a class="links" routerLink='#'>Other</a></li>
                 <li class="upper-links">
                     <a class="links" href="#">
