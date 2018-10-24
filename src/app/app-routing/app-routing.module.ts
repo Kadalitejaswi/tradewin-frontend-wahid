@@ -17,6 +17,8 @@ import { ServicesComponent } from '../properties/services/services.component';
 import { PropertiesComponent } from '../properties/properties/properties.component';
 import { TwoWayComponent } from '../two-way/two-way.component';
 import { ProductDetailsComponent } from '../properties/product-details/product-details.component';
+import { CartComponent } from '../cart/cart.component';
+import { AuthGuard } from '../auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -39,7 +41,9 @@ const routes: Routes = [
       { path: 'properties', component: PropertiesComponent }
     ],
   },
-  { path: ':product/:productId', component: ProductDetailsComponent}
+  { path: ':product/:productId', component: ProductDetailsComponent},
+  { path: 'cart', component: CartComponent,canActivate:[AuthGuard]},
+
 
 ]
 

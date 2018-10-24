@@ -27,6 +27,8 @@ import { ProductService } from './services/product.service';
 import { ProductDetailsComponent } from './properties/product-details/product-details.component';
 import { AuthService } from './services/auth.service';
 import { CartComponent } from './cart/cart.component';
+import { CartService } from './services/cart.service';
+import { AuthGuard } from './auth.guard';
 
 
 @NgModule({
@@ -60,7 +62,7 @@ import { CartComponent } from './cart/cart.component';
     HttpClientModule
    
   ],
-  providers: [ProductService,AuthService],
+  providers: [ProductService,AuthService,CartService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

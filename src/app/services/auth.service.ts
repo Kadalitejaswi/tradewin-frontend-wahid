@@ -22,12 +22,14 @@ logedIn(){
 
 logedOutUser(){
   this.removeStorage();
-        this._router.navigate(['/home']);
-        return localStorage.removeItem('token');
+  this._router.navigate(['/home']);
+  return localStorage.removeItem('token');
   }
-  removeStorage(){
-    localStorage.removeItem('token');
-   
-  } 
+removeStorage(){
+ localStorage.removeItem('token');
+ sessionStorage.removeItem('id');
+ sessionStorage.removeItem('user')
+} 
+
 
 }
