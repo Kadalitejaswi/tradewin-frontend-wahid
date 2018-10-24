@@ -62,7 +62,7 @@ import { AuthGuard } from './auth.guard';
     HttpClientModule
    
   ],
-  providers: [ProductService,AuthService,CartService,AuthGuard],
+  providers: [ProductService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

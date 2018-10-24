@@ -30,6 +30,8 @@ removeStorage(){
  sessionStorage.removeItem('id');
  sessionStorage.removeItem('user')
 } 
-
+getRole(){
+  return localStorage.getItem('role');
+}
 
 }

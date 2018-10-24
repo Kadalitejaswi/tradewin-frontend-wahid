@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   email:'',
   password:''
 }
+error:any;
   constructor(private _auth:AuthService,private _router:Router) { }
 
   ngOnInit() {
@@ -20,13 +21,16 @@ export class LoginComponent implements OnInit {
 login(data){
   this._auth.login(data).subscribe(
     res=>{
-      console.log(res);
+      // console.log(res);
       localStorage.setItem('token',res.token);
+      sessionStorage.setItem('user',res.user);
+      sessionStorage.setItem('id',res.id);
+      sessionStorage.setItem('role',res.role);
       this._router.navigate(['home']);
     },
-    err=>{
-console.log(err);
-
+    err => {
+      // console.log(err);
+      this.error = err.error.message;
     }
       
     
