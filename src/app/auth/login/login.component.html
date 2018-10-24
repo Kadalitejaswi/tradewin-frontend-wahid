@@ -2,7 +2,10 @@
   <section class="col-xs-12"> 
       <div class="col-xs-5 login-section">
         <h1 class="login-heading">LOGIN</h1>
-        <P class="login-paragraph">Enter your Emailid & password</P>
+        <P class="login-paragraph">Enter your Email Id & password</P>
+        <div  *ngIf="error" class="form-group input-group ">
+          <span class="form-control err" >{{error}}</span>
+        </div>
         <form #regForm='ngForm'>
         <div class="form-group">
           <input type="email" [(ngModel)]="logindata.email" class="form-control"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="EMAIL" id="name" name="email" #email="ngModel" required>
@@ -30,7 +33,7 @@
        <div class="text-center">
          <p class="singupAccountSetting">
            Don't have an account?&nbsp;
-           <a routerLink="/signup">Signup</a>
+           <a routerLink="/register">Signup</a>
          </p>
        </div>
        

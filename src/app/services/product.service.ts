@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductService {
+  cartCount:any;
   private _productUrl = "http://localhost:4090/api/product";
 
   products = ["properties", "cars", "electronics", "furniture", "jobs",
@@ -18,9 +19,14 @@ export class ProductService {
   }
 
   getSubProducts(name,id){
-    console.log(name);
-    console.log(id);
+    // console.log(name);
+    // console.log(id);
    return this.http.get<any>(this._productUrl+"/"+name+"/"+id)
   
+  }
+
+  getCount(count){
+this.cartCount=count
+return count;
   }
 }
