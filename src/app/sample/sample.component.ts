@@ -13,6 +13,7 @@ selection = 'name';
 options = ['name','address','other'];
 selectedAnimal = 'dog';
 animals = ['cat', 'dog', 'zebra', 'giraffe'];
+dt=new Date();
 people: any[] = [
   {
     "name": "Avinash",
@@ -26,6 +27,13 @@ people: any[] = [
     "country": 'HK'
   }
  ];
+ user={
+   name:"xyz",
+   office:{
+     address:'HYD',
+     sal:'00000'
+   }
+}
   constructor(private auth:AuthService) { 
     this.products=['cars','books','jobs','furniture','music']
   }
