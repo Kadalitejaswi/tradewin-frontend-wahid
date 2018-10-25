@@ -29,6 +29,7 @@ import { AuthService } from './services/auth.service';
 import { CartComponent } from './cart/cart.component';
 import { CartService } from './services/cart.service';
 import { AuthGuard } from './auth.guard';
+import { TokenInterceptorService } from './token-interceptor.service';
 
 
 @NgModule({
@@ -62,7 +63,7 @@ import { AuthGuard } from './auth.guard';
     HttpClientModule
    
   ],
-  providers: [ProductService,AuthService,CartService,AuthGuard],
+  providers: [ProductService,AuthService,CartService,AuthGuard,TokenInterceptorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
