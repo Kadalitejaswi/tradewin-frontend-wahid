@@ -32,6 +32,7 @@ import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { SampleComponent } from './sample/sample.component';
 import { CustomDirective } from './custom.directive';
+import { CustomPipe } from './pipe/custom.pipe';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { CustomDirective } from './custom.directive';
     CartComponent,
     SampleComponent,
     CustomDirective,
+    CustomPipe,
   ],
   imports: [
     BrowserModule,
