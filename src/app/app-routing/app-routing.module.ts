@@ -19,6 +19,7 @@ import { TwoWayComponent } from '../two-way/two-way.component';
 import { ProductDetailsComponent } from '../properties/product-details/product-details.component';
 import { CartComponent } from '../cart/cart.component';
 import { AuthGuard } from '../auth.guard';
+import { SampleComponent } from '../sample/sample.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'two-way', component: TwoWayComponent },
+  { path: 'sample', component: SampleComponent },
   { path: 'categories', component: CategoriesComponent,
     children: [
       { path: 'cars', component: CarsComponent },

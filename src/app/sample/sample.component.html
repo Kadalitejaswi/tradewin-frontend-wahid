@@ -1,0 +1,57 @@
+<!--1 example for ngIf -->
+<div class="container">
+  <div class="card text-center" *ngIf="auth.logedIn()">
+    -------------> Welcome user! >---------------------
+  </div>
+  <div class="card text-center">
+    <p *ngIf="true">
+      Expression is true and ngIf is true.
+      This paragraph is in the DOM.
+    </p>
+    <p *ngIf="false">
+      Expression is false and ngIf is false.
+      This paragraph is not in the DOM.
+    </p>
+  </div>
+</div>
+<!-- 2 example for *ngIf, Then and Else -->
+<div class="container text-center">
+  <div *ngIf="!auth.logedIn(); then loggedIn; else loggedOut">
+  </div>
+  <ng-template #loggedIn>
+    <div>
+      Welcome back!
+    </div>
+  </ng-template>
+  <ng-template #loggedOut>
+    <div>
+      Please friend, login.
+    </div>
+  </ng-template>
+</div>
+<!-- 3 example for *ngFor -->
+<ul class="card text-center" *ngFor="let product of products" style="list-style-type: none;" >
+  <li>---->{{product}}</li>
+</ul>
+<!-- 4 example for ngSwitch -->
+<select class='center-block'  [(ngModel)]="selection">
+  <option *ngFor="let option of options">{{option}}</option>
+</select>
+<div [ngSwitch]="selection" class='text-center'>
+  <div class="block1" *ngSwitchCase="options[0]">name</div>
+  <div class="block2" *ngSwitchCase="options[1]">address</div>
+  <div class="block3" *ngSwitchDefault>other</div>
+</div>
+<!-- 5 example for ngClass -->
+<div *ngFor="let animal of animals" class="text-center">
+  <div [ngClass]="{'selected': animal === selectedAnimal,
+      'unselected' : animal !== selectedAnimal}"
+      (click)="onAnimalClicked($event)">{{animal}}
+  </div>
+</div>
+<!-- 6 example for ngStyle -->
+<ul *ngFor="let person of people">
+  <li [ngStyle]="{'font-size.px':24}"
+      [style.color]="getColor(person.country)">{{ person.name }} ({{ person.country }})
+  </li>
+</ul>

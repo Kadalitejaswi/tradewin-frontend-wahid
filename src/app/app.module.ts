@@ -30,6 +30,7 @@ import { CartComponent } from './cart/cart.component';
 import { CartService } from './services/cart.service';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { SampleComponent } from './sample/sample.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { TokenInterceptorService } from './token-interceptor.service';
     TwoWayComponent,
     ProductDetailsComponent,
     CartComponent,
+    SampleComponent,
   ],
   imports: [
     BrowserModule,
