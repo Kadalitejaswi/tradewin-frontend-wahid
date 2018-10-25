@@ -31,6 +31,7 @@ import { CartService } from './services/cart.service';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { SampleComponent } from './sample/sample.component';
+import { CustomDirective } from './custom.directive';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { SampleComponent } from './sample/sample.component';
     ProductDetailsComponent,
     CartComponent,
     SampleComponent,
+    CustomDirective,
   ],
   imports: [
     BrowserModule,

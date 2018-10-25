@@ -8,6 +8,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class SampleComponent implements OnInit {
 products:any=[];
+title:String='Hello World'
 selection = 'name';
 options = ['name','address','other'];
 selectedAnimal = 'dog';
