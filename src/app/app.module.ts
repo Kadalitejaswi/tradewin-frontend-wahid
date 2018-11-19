@@ -33,6 +33,7 @@ import { TokenInterceptorService } from './token-interceptor.service';
 import { SampleComponent } from './sample/sample.component';
 import { CustomDirective } from './custom.directive';
 import { CustomPipe } from './pipe/custom.pipe';
+import { FilterPipe } from './pipes/summary.pipe';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { CustomPipe } from './pipe/custom.pipe';
     SampleComponent,
     CustomDirective,
     CustomPipe,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

@@ -51,7 +51,7 @@
 </div>
 <!-- 6 example for ngStyle -->
 <ul *ngFor="let person of people">
-  <li [ngStyle]="{'font-size.px':24}"
+  <li [ngStyle]="{'font-size':'64px'}"
       [style.color]="getColor(person.country)">{{ person.name }} ({{ person.country }})
   </li>
 </ul>

@@ -9,22 +9,27 @@ import { CartService } from '../services/cart.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isStretch:boolean=false;
-  count=0;
-  rol =sessionStorage.getItem('role');
-  role=(this.rol=='admin')?'admin':'user';
-  constructor(private _authService:AuthService,private _prod:ProductService,private _cart:CartService) { }
+  products = ["cars", "bikes", "books", "electronics", "furniture", "jobs", "pets", "fashion", "services", "properties"]
+  search = '';
+  isStretch: boolean = false;
+  count = 0;
+  _id: any;
+  rol = sessionStorage.getItem('role');
+  role = (this.rol == 'admin') ? 'admin' : 'user';
+  constructor(private _authService: AuthService, private _prod: ProductService, private _cart: CartService) { }
 
   ngOnInit() {
-    this._cart.getproducts(sessionStorage.getItem('id'))
-    .subscribe(res=>{
-       this.count=res.cartList.length;
-       console.log(res.cartList.length);
-       
-    });
+    this._id = sessionStorage.getItem('id');
+    if (this._id) {
+      this._cart.getproducts(sessionStorage.getItem('id'))
+        .subscribe(res => {
+          this.count = res.cartList.length;
+          console.log(res.cartList.length);
+        })
+    };
   }
 
-  toggleNaviagtion(){
-    this.isStretch =!this.isStretch;
+  toggleNaviagtion() {
+    this.isStretch = !this.isStretch;
   }
 }

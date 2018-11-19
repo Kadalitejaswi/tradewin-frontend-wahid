@@ -9,7 +9,7 @@ import { AuthService } from '../services/auth.service';
 export class SampleComponent implements OnInit {
 products:any=[];
 title:String='Hello World'
-selection = 'name';
+selection = 'other';
 options = ['name','address','other'];
 selectedAnimal = 'dog';
 animals = ['cat', 'dog', 'zebra', 'giraffe'];
@@ -42,6 +42,8 @@ people: any[] = [
   }
 
   onAnimalClicked(event:Event){
+    console.log(event);
+    
     const clickedAnimal = event.srcElement.innerHTML.trim();
     this.selectedAnimal = clickedAnimal;
   }

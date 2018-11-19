@@ -16,7 +16,7 @@ export class BooksComponent implements OnInit {
     .subscribe(
       res=>{
             this.books=res;
-            // console.log(res);
+            console.log(res);
             },
       err=>{
             console.log(err);

@@ -15,7 +15,7 @@ cars={}
   .subscribe(
     res=>{
           this.cars=res;
-          // console.log(res);
+          console.log(res);
           },
     err=>{
           console.log(err);
